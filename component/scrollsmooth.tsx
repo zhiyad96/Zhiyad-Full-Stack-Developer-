@@ -156,7 +156,7 @@ export default function SmoothScroll() {
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       // --- MOBILE SPECIFIC SETTINGS ---
-      touchMultiplier: 0.8, // Makes touch scrolling feel more responsive
+      touchMultiplier: 1.5, // Makes touch scrolling feel more responsive
       infinite: false,
       // @ts-ignore (Some versions use smoothTouch)
       smoothTouch: true,  
