@@ -78,7 +78,7 @@ export default function AboutSection() {
 
             <div className="overflow-hidden">
               <p className="about-reveal text-zinc-400 text-lg md:text-2xl max-w-2xl leading-relaxed mb-12">
-                With hands-on experience in Python, Django, and modern frontend tools
+                With hands-on experience in Python, Django, Djngo-RestFramework and modern frontend tools
                 like React and Next.js, I develop scalable applications focused on
                 performance, maintainability, and intuitive user experience.
               </p>
@@ -123,7 +123,7 @@ export default function AboutSection() {
               <div className="overflow-hidden border-l border-white/10 pl-6">
                 <div className="about-reveal">
                   <h4 className="text-zinc-600 text-[10px] uppercase font-bold tracking-[0.2em] mb-3">Location</h4>
-                  <p className="text-white font-medium text-lg italic">Kerala, India — Available Worldwide</p>
+                  <p className="text-white font-medium text-lg italic">Kerala, India </p>
                 </div>
               </div>
             </div>
@@ -136,7 +136,7 @@ export default function AboutSection() {
                 <div className="flex flex-col gap-4">
                   {/* Resume Download */}
                   <a
-                    href="https://drive.google.com/file/d/1WYVKcyzdW6FOcrp7CxCViv0eT0eQNUUm/view?usp=drivesdk"
+                    href="https://drive.google.com/file/d/1C45FldDcS0RYZeBJRyA3wbx9bGIlET9H/view?usp=drive_link"
                     download
                     className="flex items-center justify-between w-full p-4 rounded-xl bg-white/5 hover:bg-[#b6ed12] hover:text-black transition-all duration-500 group/btn"
                   >

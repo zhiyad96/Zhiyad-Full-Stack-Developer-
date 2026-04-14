@@ -18,6 +18,7 @@ function page() {
     <GameSection/>
     <ContactSection/>
 
+
     </>
   )
 }

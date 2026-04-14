@@ -50,7 +50,7 @@ export default function ContactSection() {
   }, { scope: container });
 
   return (
-    <section ref={container} className="bg-[#050505] py-24 px-6 md:px-20 relative overflow-hidden">
+    <section ref={container} className="bg-[#050505] py-24 px-6 md:px-20 relative ">
       
       {/* Background Decorative Text */}
       <div className="absolute -bottom-10 -left-10 text-[20vw] font-black text-white/[0.02] select-none pointer-events-none leading-none">

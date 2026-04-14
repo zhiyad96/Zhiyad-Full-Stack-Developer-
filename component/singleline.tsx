@@ -16,15 +16,15 @@ export default function ScrollProgress() {
         scaleX: 1,
         ease: "none",
         scrollTrigger: {
-          trigger: document.body,     // Tracks the entire website height
-          start: "top top",           // Start when the top of the body is at the top of the viewport
-          end: "bottom bottom",       // End when the bottom of the body hits the bottom of the viewport
-          scrub: 0.5,                 // Smooth follow-scroll effect
+          trigger: document.body,     
+          start: "top top",           
+          end: "bottom bottom",       
+          scrub: 0.5,                
         },
       });
     });
 
-    return () => ctx.revert(); // Cleanup on unmount
+    return () => ctx.revert(); 
   }, []);
 
   return (

@@ -82,7 +82,7 @@ export default function ModernHero() {
                     </div>
 
                     <a
-                        href="https://drive.google.com/file/d/1WYVKcyzdW6FOcrp7CxCViv0eT0eQNUUm/view?usp=drivesdk"
+                        href="https://drive.google.com/file/d/1C45FldDcS0RYZeBJRyA3wbx9bGIlET9H/view?usp=drive_link"
                         download
                         className="flex items-center gap-3 px-8 py-4 rounded-full border border-white/10 bg-white/5 hover:bg-white hover:text-black transition-all duration-500 text-sm font-bold uppercase tracking-widest"
                     >

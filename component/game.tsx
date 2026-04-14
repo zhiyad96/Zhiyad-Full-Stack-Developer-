@@ -1,10 +1,17 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
 import { Play, RotateCcw, Trophy } from "lucide-react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
+
 
 export default function GameSection() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+const gameBoxRef = useRef<HTMLDivElement>(null);
+
+
   const [gameState, setGameState] = useState<"idle" | "playing" | "gameover">("idle");
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
@@ -116,9 +123,23 @@ const animationFrameId = useRef<number | null>(null);
     };
   }, [gameState, score]);
 
+useGSAP(() => {
+    gsap.from(sectionRef.current, {
+  y: 50,
+  opacity: 0,
+  duration: 1,
+  ease: "power4.out",
+  scrollTrigger: {
+    trigger: sectionRef.current,
+    start: "top 70%",
+  }
+});
+  }, { scope: sectionRef });
   return (
-    <section className="py-24 bg-[#050505] px-6">
-      <div className="max-w-5xl mx-auto">
+<section
+  ref={sectionRef}
+  className="relative z-20 min-h-[105vh] w-full bg-[#050505] pt-12 md:pt-16 pb-20 px-6 md:px-20"
+>     <div className="max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div>
             <span className="text-[#b6ed12] font-mono text-xs uppercase tracking-[0.4em] block mb-2">Lab // 01</span>
@@ -137,8 +158,9 @@ const animationFrameId = useRef<number | null>(null);
         </div>
 
         {/* Game Box */}
+        <div className="sticky top-24 md:top-16">
         <div 
-          ref={containerRef}
+          ref={gameBoxRef}
           className="relative w-full h-[500px] bg-zinc-900/20 border border-white/10 rounded-[2.5rem] overflow-hidden cursor-none backdrop-blur-3xl"
         >
           <canvas ref={canvasRef} className="w-full h-full" />
@@ -177,6 +199,7 @@ const animationFrameId = useRef<number | null>(null);
               Move your mouse to dodge the particles
             </div>
           )}
+        </div>
         </div>
       </div>
     </section>

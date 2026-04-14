@@ -40,14 +40,13 @@ export default function SkillSection() {
     const amountToScroll = scrollWidth - window.innerWidth;
 
     gsap.to(horizontalRef.current, {
-      x: -amountToScroll - 100, // Move left by the calculated overflow
+      x: -amountToScroll - 100, 
       ease: "none",
       scrollTrigger: {
         trigger: triggerRef.current,
         pin: true,
         scrub: 1,
         start: "top top",
-        // The end should be proportional to how much content there is
         end: () => `+=${scrollWidth}`, 
         invalidateOnRefresh: true,
       }
