@@ -21,7 +21,6 @@ export default function SmoothScroll() {
     smoothWheel: true,
     touchMultiplier: 0.5,
     infinite: false,
-    smoothTouch: true,
   });
 
   lenis.on("scroll", ScrollTrigger.update);
